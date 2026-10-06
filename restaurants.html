@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurants | KainSaan</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#4a9782">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js"></script>
+  <script src="motion.js" defer></script>
+</head>
+<body>
+  <header class="top slim">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="KainSaan home">
+        <img class="logo" src="logo.png" alt="KainSaan" width="409" height="560">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html" aria-current="page">Restaurants</a>
+        <a href="cuisines.html">Cuisines</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Restaurants</h1>
+    <div class="finder">
+      <label class="grow">Name
+        <input type="search" id="search" placeholder="Search a restaurant by name" autocomplete="off">
+      </label>
+      <label>Cuisine
+        <select id="cuisine"><option value="">All cuisines</option></select>
+      </label>
+      <label>Sort by
+        <select id="sort">
+          <option value="rating">Highest rated</option>
+          <option value="rating_asc">Lowest rated</option>
+          <option value="name">Name, A to Z</option>
+        </select>
+      </label>
+      <button class="btn surprise" id="surprise" type="button">Surprise me</button>
+    </div>
+
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="list menu" id="list"></div>
+    <div class="empty" id="empty" hidden><p id="emptyMsg"></p></div>
+    <nav class="pager" id="pager" aria-label="Pages"></nav>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <img class="footer-logo" src="logo.png" alt="KainSaan" width="409" height="560">
+        <p>Find where to eat in and around Angeles City, Pampanga.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="cuisines.html">Cuisines</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <p class="footer-legal">&copy; 2026 KainSaan. 6ADDBASE Final Project, Advanced Database using MongoDB. | By: J.P. David - E.L. Madla - C.M. Yabut</p>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="shared.js"></script>
+  <script src="restaurants.js"></script>
+</body>
+</html>
